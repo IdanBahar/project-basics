@@ -1,3 +1,24 @@
+nav {
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: space-evenly;
+  padding: 1em;
+  gap: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+nav a {
+  text-decoration: none;
+  background-color: #4b00ff;
+  color: #fff;
+  padding: 8px;
+  border-radius: 5px;
+  transition: background-color 0.5s all;
+  font-size: 1.5em;
+}
+nav a:hover {
+  background-color: #5f36be;
+  transition: 0.5s;
+}
 .animal-list {
   background-color: #a11c1c;
   color: #fff;
@@ -27,4 +48,7 @@ td {
   margin: 40px auto;
   border-radius: 12px;
   box-shadow: 0 0 15px rgba(75, 0, 255, 0.5);
+}
+.low {
+  color: red;
 }
