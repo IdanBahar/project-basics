@@ -16,3 +16,15 @@ td {
   text-align: left;
   font-size: 1.2rem;
 }
+
+.count-down {
+  background-color: #a3dbe8;
+  border: 8px solid #4b00ff;
+  padding: 40px 60px;
+  font-size: 4rem;
+  color: hotpink;
+  text-align: center;
+  margin: 40px auto;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(75, 0, 255, 0.5);
+}
