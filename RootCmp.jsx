@@ -2,6 +2,7 @@ const { useState, useEffect, useRef } = React;
 
 import { AnimalList } from "./cmps/AnimalList.jsx";
 import { CountDown } from "./cmps/CountDown.jsx";
+import { MouseMonitor } from "./cmps/MouseMonitor.jsx";
 
 export function RootCmp() {
   const [route, setRoute] = useState("AnimalList");
@@ -16,12 +17,15 @@ export function RootCmp() {
           Count-down
         </a>
         <a href="#">Watcher-app</a>
-        <a href="#">Mouse-Monitor</a>
+        <a onClick={() => setRoute("MouseMonitor")} href="#">
+          Mouse-Monitor
+        </a>
       </nav>
       {route === "AnimalList" && <AnimalList />}
       {route === "CountDown" && (
         <CountDown startFrom={12} isDone={() => console.log("done")} />
       )}
+      {route === "MouseMonitor" && <MouseMonitor />}
     </div>
   );
 }
