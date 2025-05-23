@@ -3,6 +3,7 @@ const { useState, useEffect, useRef } = React;
 import { AnimalList } from "./cmps/AnimalList.jsx";
 import { CountDown } from "./cmps/CountDown.jsx";
 import { MouseMonitor } from "./cmps/MouseMonitor.jsx";
+import { SeasonClock } from "./cmps/SeaconClock.jsx";
 
 export function RootCmp() {
   const [route, setRoute] = useState("AnimalList");
@@ -12,7 +13,9 @@ export function RootCmp() {
         <a onClick={() => setRoute("AnimalList")} href="#">
           Animal-list
         </a>
-        <a href="#">Season-clock</a>
+        <a onClick={() => setRoute("SeasonClock")} href="#">
+          Season-clock
+        </a>
         <a onClick={() => setRoute("CountDown")} href="#">
           Count-down
         </a>
@@ -26,6 +29,7 @@ export function RootCmp() {
         <CountDown startFrom={12} isDone={() => console.log("done")} />
       )}
       {route === "MouseMonitor" && <MouseMonitor />}
+      {route === "SeasonClock" && <SeasonClock />}
     </div>
   );
 }

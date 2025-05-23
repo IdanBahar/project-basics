@@ -66,3 +66,40 @@ td {
 .mouse-position p {
   font-size: 24px;
 }
+
+.season-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: antiquewhite;
+  width: fit-content;
+  padding: 10px;
+}
+
+.spring {
+  background-color: #faedcd;
+}
+.spring.dark {
+  background-color: #d4a373;
+}
+.summer {
+  background-color: #ffea00;
+}
+.summer.dark {
+  background-color: #ff8800;
+}
+
+.winter {
+  background-color: #0096c7;
+}
+.winter.dark {
+  background-color: #023e8a;
+}
+
+.autumn {
+  background-color: #dc2f02;
+}
+.autumn.dark {
+  background-color: #6a040f;
+}
