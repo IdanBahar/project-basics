@@ -1,58 +1,58 @@
-const { useState, useEffect, useRef } = React;
+const { useState, useEffect, useRef } = React
 export function SeasonClock() {
-  const [season, setSeason] = useState({ month: "", season: "", day: "" });
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [season, setSeason] = useState({ month: '', season: '', day: '' })
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
   useEffect(() => {
-    const currentDate = new Date();
-    const dayIndex = currentDate.getDay();
-    const monthIndex = currentDate.getMonth();
+    const currentDate = new Date()
+    const dayIndex = currentDate.getDay()
+    const monthIndex = currentDate.getMonth()
 
     const months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ]
     const days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
+      'Sunday',
+      'Monday',
+      'Tuesday',
+      'Wednesday',
+      'Thursday',
+      'Friday',
+      'Saturday',
+    ]
 
-    const month = months[monthIndex];
-    const day = days[dayIndex];
+    const month = months[monthIndex]
+    const day = days[dayIndex]
 
-    let currentSeason;
+    let currentSeason
     if (monthIndex >= 2 && monthIndex <= 4) {
-      currentSeason = "Spring";
+      currentSeason = 'Spring'
     } else if (monthIndex >= 5 && monthIndex <= 7) {
-      currentSeason = "Summer";
+      currentSeason = 'Summer'
     } else if (monthIndex >= 8 && monthIndex <= 10) {
-      currentSeason = "Autumn";
+      currentSeason = 'Autumn'
     } else {
-      currentSeason = "Winter";
+      currentSeason = 'Winter'
     }
 
-    setSeason({ month, season: currentSeason, day });
-  }, []);
+    setSeason({ month, season: currentSeason, day })
+  }, [])
   function checkTheme() {
-    const classList = ["season-container"];
-    if (isDarkMode) classList.push("dark", season.season.toLocaleLowerCase());
+    const classList = ['season-container']
+    if (isDarkMode) classList.push('dark', season.season.toLocaleLowerCase())
 
-    return classList.join(" ");
+    return classList.join(' ')
   }
   return (
     <div
@@ -65,5 +65,5 @@ export function SeasonClock() {
       <img src={`./season-imgs/${season.season}.png`} alt={season.season} />
       <h3>{season.day}</h3>
     </div>
-  );
+  )
 }

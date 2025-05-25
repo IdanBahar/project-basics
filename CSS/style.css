@@ -1,10 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #202142;
+  color: #fff;
+  line-height: 1.6;
+}
+#root {
+   display: flex;
+  justify-content: center;
+  align-items: center; 
+  min-height: 100vh; 
+  flex-direction: column; /
+}
+#root :nth-child(3) {
+  margin: auto;
+}
 nav {
   display: flex;
   margin-bottom: 30px;
   justify-content: space-evenly;
   padding: 1em;
   gap: 10px;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  
 }
 nav a {
   text-decoration: none;
@@ -14,16 +38,25 @@ nav a {
   border-radius: 5px;
   transition: background-color 0.5s all;
   font-size: 1.5em;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  
 }
 nav a:hover {
   background-color: #5f36be;
   transition: 0.5s;
 }
 .animal-list {
-  background-color: #a11c1c;
+  background-color: #4b00ff;
   color: #fff;
   padding-top: 20px;
   width: fit-content;
+  text-align: center;
+}
+.animal-list h2{
+  margin-bottom: 10px;
+}
+.animal-list a{
+  color: #fff;
 }
 table {
   border: 1px solid black;
@@ -57,14 +90,25 @@ td {
   background-color: #000;
   color: #fff;
   padding: 10px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
-}
+  width: 400px;
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
 .mouse-position p {
   font-size: 24px;
+}
+.mouse-position button{
+  background-color: #fff;
+  padding: 10px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  border-radius: 5px;
+
 }
 
 .season-container {
@@ -102,4 +146,50 @@ td {
 }
 .autumn.dark {
   background-color: #6a040f;
+}
+
+.cool-hover {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cool-hover::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.cool-hover:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.cool-hover:hover::before {
+  transform: scale(1);
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #fff;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.7s step-end infinite ;
+  
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 28ch }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
 }
