@@ -37,13 +37,13 @@ export function SeasonClock() {
 
     let currentSeason
     if (monthIndex >= 2 && monthIndex <= 4) {
-      currentSeason = 'Spring'
+      currentSeason = 'spring'
     } else if (monthIndex >= 5 && monthIndex <= 7) {
-      currentSeason = 'Summer'
+      currentSeason = 'summer'
     } else if (monthIndex >= 8 && monthIndex <= 10) {
-      currentSeason = 'Autumn'
+      currentSeason = 'autumn'
     } else {
-      currentSeason = 'Winter'
+      currentSeason = 'winter'
     }
 
     setSeason({ month, season: currentSeason, day })
