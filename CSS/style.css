@@ -13,15 +13,19 @@ body {
   line-height: 1.6;
 }
 #root {
+  padding: 50px;
    display: flex;
   justify-content: center;
   align-items: center; 
   min-height: 100vh; 
   flex-direction: column; /
 }
-#root :nth-child(3) {
+/* #root :nth-child(3) {
   margin: auto;
-}
+} */
+ .container >div:nth-child(3){
+  margin: auto;
+ }
 nav {
   display: flex;
   margin-bottom: 30px;
@@ -37,7 +41,7 @@ nav a {
   padding: 8px;
   border-radius: 5px;
   transition: background-color 0.5s all;
-  font-size: 1.5em;
+  font-size: 1.1em;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   
 }
@@ -96,7 +100,9 @@ td {
   flex-direction: column;
   align-items: center;
   width: 400px;
-box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;}
+box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+}
 .mouse-position p {
   font-size: 24px;
 }
@@ -119,6 +125,9 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
   background-color: antiquewhite;
   width: fit-content;
   padding: 10px;
+  border: 2px solid rgba(135, 93, 231, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 10px 10px rgba(135, 93, 231, 0.1);
 }
 
 .spring {
@@ -192,4 +201,39 @@ box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px
 
 @keyframes blink {
   50% { border-color: transparent }
+}
+@media (max-width: 880px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    /* width: 100%; */
+    /* padding: 10px; */
+    box-sizing: border-box;
+  }
+    #root {
+    flex-direction: column;
+    width: 100vw;
+    
+  }
+nav {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1em;
+}
+
+  .mouse-position {
+    width: 90vw;
+  }
+  .season-container {
+    width: 100%;
+  }
+    .typewriter {
+    font-size: 1.2rem;
+    width: 100%;
+    max-width: 90vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }

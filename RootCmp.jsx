@@ -8,7 +8,7 @@ import { SeasonClock } from './cmps/SeaconClock.jsx'
 export function RootCmp() {
   const [route, setRoute] = useState('AnimalList')
   return (
-    <div>
+    <div className='container'>
       <h1 className='typewriter'>My First App – Please Clap 👏 . . . .</h1>
       <nav>
         <a
